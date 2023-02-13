@@ -36,9 +36,9 @@ namespace ClearArquitecture.Api.Controllers
         public async Task<ActionResult<IEnumerable<Product>>> GetAllAsync()
         {
 
-            await _productRepository.GetAll();
+            var products = await _productRepository.GetAll();
 
-            return Ok();
+            return Ok(products);
         }
 
 
